@@ -24,7 +24,7 @@ namespace Sigma_task7
                 if (sentence == exitWord)
                     break;
            
-                string result = Regex.Replace(sentence, @"\b(\w+)\b", 
+                string result = Regex.Replace(sentence, WordPattern.ToString(), 
                     (m) => Vocabulary.ContainsKey(m.Value) ? Vocabulary[m.Value] : FindOutTranslation(m.Value), 
                     RegexOptions.IgnoreCase);
 
