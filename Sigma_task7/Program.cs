@@ -7,11 +7,11 @@ using System.IO;
 namespace Sigma_task7
 {
     class Program
-    {
-        private static Dictionary<string, string> Vocabulary = new Dictionary<string, string>();
+    { треба мислити в дусі ООП. Main мав бути чистий.
+        private static Dictionary<string, string> Vocabulary = new Dictionary<string, string>(); поля з маленької літери
         private const string exitWord = "end";
         private static Regex TranslationPattern = new Regex(@"\b(\w+)\s?-\s?(\w+)\b");
-        private static Regex WordPattern = new Regex(@"\b\w+\b");
+        private static Regex WordPattern = new Regex(@"\b\w+\b");Це не мали б бути поля навіть, якщо все одним класом писати
         static void Main(string[] args)
         {
             FillDictionary();
@@ -21,7 +21,7 @@ namespace Sigma_task7
             {
                 Console.Write("Type sentence : ");
                 sentence = Console.ReadLine();
-                if (sentence == exitWord)
+                if (sentence == exitWord)задача стояла просто зчитати весь текс, а не з кінцевим словом маркером
                     break;
            
                 string result = Regex.Replace(sentence, WordPattern.ToString(), 
@@ -53,6 +53,7 @@ namespace Sigma_task7
         {
             Console.WriteLine("Fill dictionary (enter '{0}' to finish):", exitWord);
             string input = string.Empty;
+            Чому вічні цикли завжди?
             while(true)
             {
                 input = Console.ReadLine();
