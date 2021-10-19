@@ -2,7 +2,7 @@
 using System.IO;
 
 namespace Sigma_task7_B
-{
+{Біда з ООП Задача не самоціль!!!
     class Program
     {
         static void Main(string[] args)
